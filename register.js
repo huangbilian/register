@@ -26,29 +26,32 @@ $('#user').on('blur',function(){
     $('#user-message').html('用户名不能超过7个汉字或14个字符');
     return ;
   }*/
-  $('#user-message').html('');
-  y1 = true; 
-
+  else{
+    $('#user-message').html('');
+    y1 = true; 
+  }
 });
 
 //填写手机号
 $('#phone').on('blur',function(){
-  if(!/^((13[0-9])|(14[5|7])|(15([0-3]|[5-9]))|(18[0,5-9]))\d{8}$/.test($('#phone').val())){
+  if(!/^1[3456789]\d{9}$/.test($('#phone').val())){
     $('#phone-message').html("手机号码格式不正确!");
   }
-  $('#phone-message').html('');
-  y2 = true;
-  
+  else{
+    $('#phone-message').html('');
+    y2 = true;
+  }
 });
 
 //设置密码
 $('#pwd').on('blur',function(){
-  if(!/^(?![\d]+$)(?![a-zA-Z]+$)(?![^\da-zA-Z]+$).{8,14}$/.test($('#pwd').val())){
+  if(!/(?!.*\s)(?!^[\u4e00-\u9fa5]+$)(?!^[0-9]+$)(?!^[A-z]+$)(?!^[^A-z0-9]+$)^.{8,14}$/.test($('#pwd').val())){
     $('#pwd-message').html("密码设置不符合要求!");
   }
-  $('#pwd-message').html('');
-  y3 = true;
-  
+  else{
+    $('#pwd-message').html('');
+    y3 = true;
+  }
 });
 
 //获取验证码
