@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>注册百度账号</title>
+  <link rel="stylesheet" href="./register.css">
+</head>
+<body>
+  <div id="main">
+    <h2>欢迎注册</h2>
+    <p>已有帐号？<span class="login_btn">登录</span></p>
+    <br>
+    
+    <label>用户名</label> 
+    <input id="user" type="text" placeholder="请设置用户名">
+    <br>
+    <div id="user-message"></div>
+
+    <label>手机号</label> 
+    <input id="phone" type="text" placeholder="可用于登录和找回密码">
+    <br>
+    <div id="phone-message"></div>
+
+    <label>密码</label> 
+    <input id="pwd" type="password" placeholder="请设置登陆密码">
+    <br>
+    <div id="pwd-message"></div>
+    
+    <label>验证码</label> 
+    <input id="num" type="text" placeholder="请输入验证码"> 
+    <input id="get" type="button" value="获取验证码">
+    <br>
+    <div id="num-message"></div>
+    
+    <input id="register" type="button" value="注册">
+    <br>
+    <input type="checkbox" id="choose"> 
+    <label for="choose" id="choose2">阅读并接受《百度用户协议》</label>
+  </div>
+  <script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="./register.js"></script>
+</body>
+</html>
