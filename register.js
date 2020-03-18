@@ -26,10 +26,8 @@ $('#user').on('blur',function(){
     $('#user-message').html('用户名不能超过7个汉字或14个字符');
     return ;
   }*/
-  else{
-    $('#user-message').html('');
-    y1 = true;
-  } 
+  $('#user-message').html('');
+  y1 = true; 
 
 });
 
@@ -37,20 +35,20 @@ $('#user').on('blur',function(){
 $('#phone').on('blur',function(){
   if(!(/^1[3456789]\d{9}$/).test($('#phone').val())){
     $('#phone-message').html("手机号码格式不正确!");
-  }else{
-    $('#phone-message').html('');
-    y2 = true;
   }
+  $('#phone-message').html('');
+  y2 = true;
+  
 });
 
 //设置密码
 $('#pwd').on('blur',function(){
   if(!/^(?![\d]+$)(?![a-zA-Z]+$)(?![^\da-zA-Z]+$).{8,14}$/.test($('#pwd').val())){
     $('#pwd-message').html("密码设置不符合要求!");
-  }else{
-    $('#pwd-message').html('');
-    y3 = true;
   }
+  $('#pwd-message').html('');
+  y3 = true;
+  
 });
 
 //获取验证码
