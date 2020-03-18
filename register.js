@@ -18,7 +18,7 @@ $('#user').on('blur',function(){
     $('#user-message').html('用户名仅支持中英文、数字和下划线,且不能为纯数字!');
     return ;
   }
-  if(!/\D/.test($('user').val())){
+  if(!/\D/.test($('#user').val())){
     $('#user-message').html('用户名仅支持中英文、数字和下划线,且不能为纯数字!');
     return ;
   }
