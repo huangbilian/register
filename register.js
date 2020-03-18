@@ -14,7 +14,7 @@ $('#user').on('blur',function(){
   if($('#user').val() === ''){
     $('#user-pmessage').html('用户名不能为空!');
   }
-  if(!/(?!^[0-9]+$)(?!^[A-z]+$)(?!^[^A-z0-9]+$)^[^\s\u4e00-\u9fa5]{1,14}$/.test($('#user').val())){
+  if(!/^([\u4e00-\u9fa5]{1,7})|([A-Za-z0-9_]{1,14})|([a-zA-Z0-9_\u4e00-\u9fa5]{1,14})$/.test($('#user').val())){
     $('#user-message').html('用户名仅支持中英文、数字和下划线,且不能为纯数字!');
     return ;
   }
@@ -33,7 +33,7 @@ $('#user').on('blur',function(){
 
 //填写手机号
 $('#phone').on('blur',function(){
-  if(!(/^1[3456789]\d{9}$/).test($('#phone').val())){
+  if(!/^((13[0-9])|(14[5|7])|(15([0-3]|[5-9]))|(18[0,5-9]))\d{8}$/.test($('#phone').val())){
     $('#phone-message').html("手机号码格式不正确!");
   }
   $('#phone-message').html('');
